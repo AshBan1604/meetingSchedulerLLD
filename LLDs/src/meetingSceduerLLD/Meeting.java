@@ -4,17 +4,17 @@ import java.util.List;
 
 public class Meeting {
 
-	private List<Observer> participantList;
+	private List<Participants> participantList;
 	private TimeSlot timeSlot;
 	
-	public Meeting(List<Observer> participantList, TimeSlot timeSlot) {
+	public Meeting(List<Participants> participantList, TimeSlot timeSlot) {
 		this.participantList = participantList;
 		this.timeSlot = timeSlot;
 	}
 
 	public void notifyParticipants(String string) {
-		for(Observer participants : participantList) {
-			participants.notify(string);
+		for(Participants participants : participantList) {
+			participants.notify(string, participants.name, participants.emailID);
 		}
 	}
 

@@ -14,9 +14,11 @@ public class Main {
 		meetingController.addRoom(room1);
 		meetingController.addRoom(room2);
 		
-		Participants participants = new Participants("Ashish", "ashish@gmail.com");
-		List<Observer> participantList = new ArrayList<>();
-		participantList.add(participants);
+		Participants participant1 = new Participants("Ashish", "ashish@gmail.com");
+		Participants participant2 = new Participants("Banker", "banker@gmail.com");
+		List<Participants> participantList = new ArrayList<>();
+		participantList.add(participant1);
+		participantList.add(participant2);
 		
 		
 		MeetingScheduler meetingScheduler = new MeetingScheduler(new BusinessNeed(), meetingController);
@@ -27,7 +29,7 @@ public class Main {
 		System.out.println("=========================================");
 		
 		Participants participants2 = new Participants("Ashish", "ashish@gmail.com");
-		List<Observer> participantList2 = new ArrayList<>();
+		List<Participants> participantList2 = new ArrayList<>();
 		participantList2.add(participants2);
 		
 		
@@ -39,7 +41,7 @@ public class Main {
 		System.out.println("=========================================");
 		
 		Participants participants3 = new Participants("Ashish", "ashish@gmail.com");
-		List<Observer> participantList3 = new ArrayList<>();
+		List<Participants> participantList3 = new ArrayList<>();
 		participantList3.add(participants3);
 		
 		

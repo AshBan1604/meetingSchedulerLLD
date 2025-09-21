@@ -16,7 +16,7 @@ public class MeetingScheduler {
 		controller = meetingController;
 	}
 
-	public Room scheduleMeet(String requirement, List<Observer> participantList, TimeSlot timeSlot) {
+	public Room scheduleMeet(String requirement, List<Participants> participantList, TimeSlot timeSlot) {
 		LinkedList<Room> emptyRooms = controller.getEmptyRoom(timeSlot);
 		Room selectedRoom = meetingStrategy.selectRoom(emptyRooms);
 		

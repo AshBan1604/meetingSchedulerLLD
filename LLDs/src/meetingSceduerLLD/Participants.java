@@ -2,8 +2,8 @@ package meetingSceduerLLD;
 
 public class Participants implements Observer{
 
-	private String name;
-	private String emailID;
+	String name;
+	String emailID;
 	
 	public Participants(String name, String emailID) {
 		this.name = name;
@@ -11,8 +11,8 @@ public class Participants implements Observer{
 	}
 
 	@Override
-	public void notify(String news) {
-		System.out.println(news);
+	public void notify(String news, String name, String emailID) {
+		System.out.println(news+" and shared notification of it with "+name+" at mailId- "+emailID);
 		
 	}
 	
